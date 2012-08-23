@@ -1048,7 +1048,6 @@ diff -Naur ./old//include/DarwinTypes.h ./kern//include/DarwinTypes.h
 +#endif /* _UINT64_T */
 +
 +#endif
-\ No newline at end of file
 diff -Naur ./old//include/linux/in.h ./kern//include/linux/in.h
 --- ./old//include/linux/in.h 2011-01-04 19:50:19.000000000 -0500
 +++ ./kern//include/linux/in.h  2012-06-13 08:57:51.000000000 -0400
@@ -1406,7 +1405,6 @@ diff -Naur ./old//include/MachO.h ./kern//include/MachO.h
 +};
 +
 +#endif
-\ No newline at end of file
 diff -Naur ./old//init/main.c ./kern//init/main.c
 --- ./old//init/main.c  2011-01-04 19:50:19.000000000 -0500
 +++ ./kern//init/main.c 2012-06-23 11:01:41.000000000 -0400
@@ -2043,7 +2041,6 @@ diff -Naur ./old//magenta/bsd_syscalls.c ./kern//magenta/bsd_syscalls.c
 + ret = sys_lseek(fd, (off_t)offset, whence);
 + return (long)(ret);
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/darwin_getdirentries.c ./kern//magenta/darwin_getdirentries.c
 --- ./old//magenta/darwin_getdirentries.c 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/darwin_getdirentries.c  2012-08-04 17:46:27.000000000 -0400
@@ -2211,7 +2208,6 @@ diff -Naur ./old//magenta/darwin_getdirentries.c ./kern//magenta/darwin_getdiren
 +
 + return error;
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/Ipc.h ./kern//magenta/Ipc.h
 --- ./old//magenta/Ipc.h  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/Ipc.h 2012-08-05 16:08:36.000000000 -0400
@@ -2252,7 +2248,6 @@ diff -Naur ./old//magenta/Ipc.h ./kern//magenta/Ipc.h
 + boolean_t large);
 +
 +#endif
-\ No newline at end of file
 diff -Naur ./old//magenta/ipc_types.h ./kern//magenta/ipc_types.h
 --- ./old//magenta/ipc_types.h  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/ipc_types.h 2012-08-05 18:18:37.000000000 -0400
@@ -2583,7 +2578,6 @@ diff -Naur ./old//magenta/ke_array.c ./kern//magenta/ke_array.c
 +{
 + return ke_array_set_at(arr, ke_array_get_count(arr), anObject);
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/kern_return.h ./kern//magenta/kern_return.h
 --- ./old//magenta/kern_return.h  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/kern_return.h 2012-08-05 12:10:54.000000000 -0400
@@ -3238,7 +3232,6 @@ diff -Naur ./old//magenta/ke_runtime.h ./kern//magenta/ke_runtime.h
 +#define ke_critical panic
 +
 +#endif
-\ No newline at end of file
 diff -Naur ./old//magenta/kext.c ./kern//magenta/kext.c
 --- ./old//magenta/kext.c 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/kext.c  2012-08-08 10:24:18.000000000 -0400
@@ -3988,7 +3981,6 @@ diff -Naur ./old//magenta/kext.c ./kern//magenta/kext.c
 +   return KERN_FAILURE;
 + }
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/libkern.c ./kern//magenta/libkern.c
 --- ./old//magenta/libkern.c  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/libkern.c 2012-08-04 17:47:18.000000000 -0400
@@ -4119,7 +4111,6 @@ diff -Naur ./old//magenta/libkern.c ./kern//magenta/libkern.c
 + return ret;
 +}
 +EXPORT_SYMBOL(_Znwm);
-\ No newline at end of file
 diff -Naur ./old//magenta/libkern.h ./kern//magenta/libkern.h
 --- ./old//magenta/libkern.h  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/libkern.h 2012-08-04 17:47:23.000000000 -0400
@@ -4145,7 +4136,6 @@ diff -Naur ./old//magenta/libkern.h ./kern//magenta/libkern.h
 +void bcopy(const void *src, void *dest, size_t n);
 +
 +#endif
-\ No newline at end of file
 diff -Naur ./old//magenta/loader.h ./kern//magenta/loader.h
 --- ./old//magenta/loader.h 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/loader.h  2012-06-16 17:04:07.000000000 -0400
@@ -4270,7 +4260,6 @@ diff -Naur ./old//magenta/loader.h ./kern//magenta/loader.h
 +};
 +
 +#endif
-\ No newline at end of file
 diff -Naur ./old//magenta/Log.c ./kern//magenta/Log.c
 --- ./old//magenta/Log.c  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/Log.c 2012-08-08 10:19:02.000000000 -0400
@@ -4404,7 +4393,6 @@ diff -Naur ./old//magenta/Log.c ./kern//magenta/Log.c
 +
 + return r;
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/mach_core.c ./kern//magenta/mach_core.c
 --- ./old//magenta/mach_core.c  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/mach_core.c 2012-08-08 11:32:35.000000000 -0400
@@ -5134,7 +5122,6 @@ diff -Naur ./old//magenta/mach_host.c ./kern//magenta/mach_host.c
 +
 + ke_log("mach_host_init(): host initialized (self = %p)!\n", _host_self);
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/mach_kmsg.c ./kern//magenta/mach_kmsg.c
 --- ./old//magenta/mach_kmsg.c  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/mach_kmsg.c 2012-08-06 11:00:25.000000000 -0400
@@ -5622,7 +5609,6 @@ diff -Naur ./old//magenta/mach_kmsg.c ./kern//magenta/mach_kmsg.c
 +out:
 + return retval;
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/mach_kmsg.h ./kern//magenta/mach_kmsg.h
 --- ./old//magenta/mach_kmsg.h  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/mach_kmsg.h 2012-06-03 12:06:16.000000000 -0400
@@ -5680,7 +5666,6 @@ diff -Naur ./old//magenta/mach_kmsg.h ./kern//magenta/mach_kmsg.h
 +} kmsg_mach_task_self_msg_t;
 +
 +#endif
-\ No newline at end of file
 diff -Naur ./old//magenta/macho_loader.c ./kern//magenta/macho_loader.c
 --- ./old//magenta/macho_loader.c 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/macho_loader.c  2012-08-06 11:01:48.000000000 -0400
@@ -7182,7 +7167,6 @@ diff -Naur ./old//magenta/mach_port_types.h ./kern//magenta/mach_port_types.h
 +void mach_task_dec_thread_count(task_port_t* tport);
 +
 +#endif 
-\ No newline at end of file
 diff -Naur ./old//magenta/mach_semaphore.c ./kern//magenta/mach_semaphore.c
 --- ./old//magenta/mach_semaphore.c 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/mach_semaphore.c  2012-07-19 11:35:08.000000000 -0400
@@ -7357,7 +7341,6 @@ diff -Naur ./old//magenta/mach_semaphore.c ./kern//magenta/mach_semaphore.c
 +{
 + xxxxx();
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/mach_task.c ./kern//magenta/mach_task.c
 --- ./old//magenta/mach_task.c  1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/mach_task.c 2012-08-06 15:09:10.000000000 -0400
@@ -8575,7 +8558,6 @@ diff -Naur ./old//magenta/mach_task.c ./kern//magenta/mach_task.c
 +{
 + 
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/mach_user_port.c ./kern//magenta/mach_user_port.c
 --- ./old//magenta/mach_user_port.c 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/mach_user_port.c  2012-08-06 10:39:38.000000000 -0400
@@ -9248,7 +9230,6 @@ diff -Naur ./old//magenta/mach_user_port.c ./kern//magenta/mach_user_port.c
 +}
 +
 +//mach_port_allocate(ke_get_current_task(), MACH_PORT_RIGHT_RECEIVE, &mp);
-\ No newline at end of file
 diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 --- ./old//magenta/magenta_kernel 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/magenta_kernel  2012-07-02 17:44:36.000000000 -0400
@@ -9900,7 +9881,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++#endif /* _UINT64_T */
 ++
 ++#endif
-+\ No newline at end of file
 +diff -Naur ./old//include/linux/in.h ./kern//include/linux/in.h
 +--- ./old//include/linux/in.h  2011-01-05 00:50:19.000000000 +0000
 ++++ ./kern//include/linux/in.h 2012-06-13 13:57:51.000000000 +0100
@@ -10248,7 +10228,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++};
 ++
 ++#endif
-+\ No newline at end of file
 +diff -Naur ./old//init/main.c ./kern//init/main.c
 +--- ./old//init/main.c 2011-01-05 00:50:19.000000000 +0000
 ++++ ./kern//init/main.c  2012-06-23 16:01:41.000000000 +0100
@@ -10515,7 +10494,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++
 ++  return error;
 ++}
-+\ No newline at end of file
 +diff -Naur ./old//magenta/ipc_types.h ./kern//magenta/ipc_types.h
 +--- ./old//magenta/ipc_types.h 1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/ipc_types.h  2012-06-24 12:36:30.000000000 +0100
@@ -10803,7 +10781,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++{
 ++  return ke_array_set_at(arr, ke_array_get_count(arr), anObject);
 ++}
-+\ No newline at end of file
 +diff -Naur ./old//magenta/kern_return.h ./kern//magenta/kern_return.h
 +--- ./old//magenta/kern_return.h 1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/kern_return.h  2012-06-16 01:33:41.000000000 +0100
@@ -11341,7 +11318,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++#define ke_critical panic
 ++
 ++#endif
-+\ No newline at end of file
 +diff -Naur ./old//magenta/ke_task.c ./kern//magenta/ke_task.c
 +--- ./old//magenta/ke_task.c 1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/ke_task.c  2012-06-24 16:10:59.000000000 +0100
@@ -11601,7 +11577,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++{
 ++  
 ++}
-+\ No newline at end of file
 +diff -Naur ./old//magenta/kext.c ./kern//magenta/kext.c
 +--- ./old//magenta/kext.c  1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/kext.c 2012-06-24 16:09:20.000000000 +0100
@@ -12267,7 +12242,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++    panic("kext loading failure!");
 ++  }
 ++}
-+\ No newline at end of file
 +diff -Naur ./old//magenta/loader.h ./kern//magenta/loader.h
 +--- ./old//magenta/loader.h  1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/loader.h 2012-06-16 22:04:07.000000000 +0100
@@ -12392,7 +12366,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++};
 ++
 ++#endif
-+\ No newline at end of file
 +diff -Naur ./old//magenta/mach.c ./kern//magenta/mach.c
 +--- ./old//magenta/mach.c  1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/mach.c 2012-07-01 00:02:22.000000000 +0100
@@ -13032,7 +13005,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++    }
 ++  }
 ++}
-+\ No newline at end of file
 +diff -Naur ./old//magenta/mach_kmsg.h ./kern//magenta/mach_kmsg.h
 +--- ./old//magenta/mach_kmsg.h 1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/mach_kmsg.h  2012-06-03 17:06:16.000000000 +0100
@@ -13090,7 +13062,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++} kmsg_mach_task_self_msg_t;
 ++
 ++#endif
-+\ No newline at end of file
 +diff -Naur ./old//magenta/macho_loader.c ./kern//magenta/macho_loader.c
 +--- ./old//magenta/macho_loader.c  1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/macho_loader.c 2012-06-24 14:24:44.000000000 +0100
@@ -14467,7 +14438,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++#define RightDecrementRefCount(x, y) atomic_dec(&(x->y))
 ++
 ++#endif 
-+\ No newline at end of file
 +diff -Naur ./old//magenta/mach_syscall.S ./kern//magenta/mach_syscall.S
 +--- ./old//magenta/mach_syscall.S  1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/mach_syscall.S 2012-06-30 12:53:47.000000000 +0100
@@ -14547,7 +14517,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++  /* error out */
 ++  mov r0, r7
 ++  b ke_darwin_syscall_error
-+\ No newline at end of file
 +diff -Naur ./old//magenta/mach_user_port.c ./kern//magenta/mach_user_port.c
 +--- ./old//magenta/mach_user_port.c  1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/mach_user_port.c 2012-07-01 02:38:40.000000000 +0100
@@ -15054,7 +15023,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++}
 ++
 ++//mach_port_allocate(ke_get_current_task(), MACH_PORT_RIGHT_RECEIVE, &mp);
-+\ No newline at end of file
 +diff -Naur ./old//magenta/Makefile ./kern//magenta/Makefile
 +--- ./old//magenta/Makefile  1970-01-01 01:00:00.000000000 +0100
 ++++ ./kern//magenta/Makefile 2012-06-23 17:50:17.000000000 +0100
@@ -15072,7 +15040,6 @@ diff -Naur ./old//magenta/magenta_kernel ./kern//magenta/magenta_kernel
 ++obj-y += mach_syscall.o
 ++obj-y += ke_task.o
 ++obj-y += mach_user_port.o
-+\ No newline at end of file
 +diff -Naur ./old//Makefile ./kern//Makefile
 +--- ./old//Makefile  2011-01-05 00:50:19.000000000 +0000
 ++++ ./kern//Makefile 2012-05-19 00:13:20.000000000 +0100
@@ -15300,7 +15267,6 @@ diff -Naur ./old//magenta/Makefile ./kern//magenta/Makefile
 +obj-y  += OSAtomic.o
 +obj-y  += VM.o
 +obj-y  += Log.o
-\ No newline at end of file
 diff -Naur ./old//magenta/OSAtomic.S ./kern//magenta/OSAtomic.S
 --- ./old//magenta/OSAtomic.S 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/OSAtomic.S  2012-07-31 12:49:31.000000000 -0400
@@ -15630,7 +15596,6 @@ diff -Naur ./old//magenta/Sleh_swi_darwin.S ./kern//magenta/Sleh_swi_darwin.S
 + /* error out */
 + mov r0, r7
 + b ke_darwin_syscall_error
-\ No newline at end of file
 diff -Naur ./old//magenta/Standard.h ./kern//magenta/Standard.h
 --- ./old//magenta/Standard.h 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/Standard.h  2012-08-04 13:44:41.000000000 -0400
@@ -15667,7 +15632,6 @@ diff -Naur ./old//magenta/Standard.h ./kern//magenta/Standard.h
 +#include <asm/cacheflush.h>
 +#include <linux/linkage.h>
 +#include <asm/thread_notify.h>
-\ No newline at end of file
 diff -Naur ./old//magenta/VM.c ./kern//magenta/VM.c
 --- ./old//magenta/VM.c 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/VM.c  2012-08-04 14:33:19.000000000 -0400
@@ -15955,7 +15919,6 @@ diff -Naur ./old//magenta/VM.c ./kern//magenta/VM.c
 +   return KERN_FAILURE;
 + }
 +}
-\ No newline at end of file
 diff -Naur ./old//magenta/VM.h ./kern//magenta/VM.h
 --- ./old//magenta/VM.h 1969-12-31 19:00:00.000000000 -0500
 +++ ./kern//magenta/VM.h  2012-08-04 14:18:02.000000000 -0400
@@ -15992,7 +15955,6 @@ diff -Naur ./old//magenta/VM.h ./kern//magenta/VM.h
 + boolean_t user);
 +
 +#endif
-\ No newline at end of file
 diff -Naur ./old//Makefile ./kern//Makefile
 --- ./old//Makefile 2011-01-04 19:50:19.000000000 -0500
 +++ ./kern//Makefile  2012-05-18 19:13:20.000000000 -0400
